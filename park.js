@@ -15,9 +15,17 @@ Park.prototype.removeDinosaursOfSameType = function (dinosaurType) {
     if(this.enclosure[i].type === dinosaurType) {
        this.enclosure.splice(i, 1);
        i--;
-      
+
     }
 }
+};
+
+Park.prototype.moreThanTwoOffspring = function () {
+  const moreThanTwoOffspring = [];
+  for(dinosaur of this.enclosure){
+    if(dinosaur.offspring > 2)
+    moreThanTwoOffspring.push(dinosaur);
+  } return moreThanTwoOffspring;
 };
 
 module.exports = Park;
