@@ -1,8 +1,8 @@
 const assert = require('assert');
 const Dinosaur = require('../dinosaur.js');
-const Enclosure = require('../enclosure.js');
+const Park = require('../park.js');
 
-describe('enclosure', function(){
+describe('park', function(){
   let enclosure;
   let dinosaur1;
   let dinosaur2;
