@@ -14,4 +14,8 @@ describe('dinosaur', function(){
     dinosaur3 = new Dinosaur('Diplodocus', 4);
   });
 
+  it('should have type', function(){
+    assert.strictEqual(dinosaur1.type, 'Tyrannosaurus');
+  });
+
 });
