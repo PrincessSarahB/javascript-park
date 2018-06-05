@@ -25,5 +25,15 @@ describe('park', function(){
     assert.strictEqual(park.enclosure.length, 2);
   });
 
+  it('should be able to remove dinosaur of certain type', function(){
+    park.addDinosaur(dinosaur1);
+    park.addDinosaur(dinosaur1);
+    park.addDinosaur(dinosaur2);
+    park.removeDinosaursOfSameType('Tyrannosaurus');
+    assert.strictEqual(park.enclosure.length, 1);
+  });
+
+
+
 
 });
