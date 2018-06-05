@@ -19,5 +19,11 @@ describe('park', function(){
     assert.strictEqual(park.enclosure.length, 0);
   });
 
+  it('should be able to add dinosaur', function(){
+    park.add(dinosaur1);
+    park.add(dinosaur2);
+    assert.strictEqual(park.enclosure.length, 2);
+  });
+
 
 });
