@@ -1,6 +1,6 @@
 const assert = require('assert');
 const Dinosaur = require('../dinosaur.js');
-const Enclosure = require('../enclosure.js');
+
 
 describe('dinosaur', function(){
 
