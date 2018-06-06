@@ -38,7 +38,12 @@ describe('park', function(){
   park.addDinosaur(dinosaur2);
   park.addDinosaur(dinosaur3);
     assert.strictEqual(park.moreThanTwoOffspring().length, 2)
-  })
+  });
+
+  it('should be able to calculate the number of dinosaurs after 1 year starting with 1 dinosaur', function(){
+    park.addDinosaur(dinosaur1);
+    assert.strictEqual(park.numberOfDinosaurs(), 4)
+  });
 
 
 
