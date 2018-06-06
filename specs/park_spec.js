@@ -42,8 +42,21 @@ describe('park', function(){
 
   it('should be able to calculate the number of dinosaurs after 1 year starting with 1 dinosaur', function(){
     park.addDinosaur(dinosaur1);
-    assert.strictEqual(park.numberOfDinosaurs(), 4)
+    assert.strictEqual(park.numberOfDinosaurs(1), 4);
   });
+
+  it('should be able to calculate number of dinosaurs after year two, starting with 1 dinosaur', function(){
+    park.addDinosaur(dinosaur1);
+    assert.strictEqual(park.numberOfDinosaurs(2), 16);
+  });
+
+  it('should be able to calculate number of dinosaurs after year two, starting with 2 dinosaurs', function(){
+    park.addDinosaur(dinosaur1);
+    park.addDinosaur(dinosaur2);
+    assert.strictEqual(park.numberOfDinosaurs(2), 20);
+  });
+
+
 
 
 

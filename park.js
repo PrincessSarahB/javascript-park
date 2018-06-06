@@ -40,10 +40,12 @@ Park.prototype.moreThanTwoOffspring = function () {
   } return moreThanTwoOffspring;
 };
 
-Park.prototype.numberOfDinosaurs = function () {
-  for (dinosaur of this.enclosure){
-    return dinosaur += dinosaur.offspring;
+Park.prototype.numberOfDinosaurs = function (years) {
+  let total = 0;
+  for (let dinosaur of this.enclosure){
+    total +=(1 + dinosaur.offspring) ** years;
   }
+  return total;
 };
 
 module.exports = Park;
